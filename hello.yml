@@ -1,0 +1,6 @@
+template: Hello, %s!
+defaultName: Stranger
+resources: 
+ - com.example.helloworld.resources.TestResource
+ - com.example.helloworld.resources.ProductsApi
+
