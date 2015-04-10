@@ -4,7 +4,7 @@ This example application was developed to provide a template of the use of DropW
 
 # Overview
 
-The project contains a small set of resources that can be used as an example of how to create new web services with this infrastructure. Some of the tools used for this application are:
+The project contains a small set of resources that can be used as an starting project of how to create Java REST web services. Some of the tools used for this application are:
 
 -[Maven](http://maven.apache.org/) Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
 
