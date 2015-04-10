@@ -2,5 +2,6 @@ com/example/helloworld/resources/HelloWorldResource.class
 com/example/helloworld/core/Saying.class
 com/example/helloworld/HelloWorldApplication.class
 com/example/helloworld/health/TemplateHealthCheck.class
+com/example/helloworld/resources/ProductsApi.class
 com/example/helloworld/resources/TestResource.class
 com/example/helloworld/HelloWorldConfiguration.class

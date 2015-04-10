@@ -79,8 +79,8 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
         // Set the swagger config options
         SwaggerConfig config = ConfigFactory.config();
-        config.setApiVersion("1.0.1");
-        config.setBasePath("http://localhost:8000");
+        config.setApiVersion("0.0.1");
+        config.setBasePath("http://localhost:8080");
         
     }
 

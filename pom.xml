@@ -8,7 +8,7 @@
 
 	<artifactId>dropwizard-example</artifactId>
 	<version>0.0.1</version>
-	<groupId>io.dropwizard</groupId>
+	<groupId>com.crowdtorch</groupId>
 	<name>Dropwizard Example Application</name>
 
 	<properties>

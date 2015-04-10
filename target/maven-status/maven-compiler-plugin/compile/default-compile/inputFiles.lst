@@ -1,7 +1,7 @@
-/home/cventdev/git/dropwizard/dropwizard-example/src/main/java/com/example/helloworld/resources/ProductsApi.java
-/home/cventdev/git/dropwizard/dropwizard-example/src/main/java/com/example/helloworld/HelloWorldApplication.java
-/home/cventdev/git/dropwizard/dropwizard-example/src/main/java/com/example/helloworld/core/Saying.java
-/home/cventdev/git/dropwizard/dropwizard-example/src/main/java/com/example/helloworld/HelloWorldConfiguration.java
-/home/cventdev/git/dropwizard/dropwizard-example/src/main/java/com/example/helloworld/resources/HelloWorldResource.java
-/home/cventdev/git/dropwizard/dropwizard-example/src/main/java/com/example/helloworld/health/TemplateHealthCheck.java
-/home/cventdev/git/dropwizard/dropwizard-example/src/main/java/com/example/helloworld/resources/TestResource.java
+/home/cventdev/git/dropWizardWs/src/main/java/com/example/helloworld/resources/TestResource.java
+/home/cventdev/git/dropWizardWs/src/main/java/com/example/helloworld/resources/ProductsApi.java
+/home/cventdev/git/dropWizardWs/src/main/java/com/example/helloworld/resources/HelloWorldResource.java
+/home/cventdev/git/dropWizardWs/src/main/java/com/example/helloworld/core/Saying.java
+/home/cventdev/git/dropWizardWs/src/main/java/com/example/helloworld/HelloWorldConfiguration.java
+/home/cventdev/git/dropWizardWs/src/main/java/com/example/helloworld/health/TemplateHealthCheck.java
+/home/cventdev/git/dropWizardWs/src/main/java/com/example/helloworld/HelloWorldApplication.java
