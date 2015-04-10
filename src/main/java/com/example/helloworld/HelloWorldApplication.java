@@ -1,6 +1,5 @@
 package com.example.helloworld;
 
-import java.util.Iterator;
 import java.util.List;
 
 import io.dropwizard.Application;
@@ -33,7 +32,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
     @Override
     public void initialize(Bootstrap<HelloWorldConfiguration> bootstrap) {
-    	bootstrap.addBundle(new AssetsBundle("/assets"));
+    	bootstrap.addBundle(new AssetsBundle("/assets","/docs","index.html"));
     }
 
     @Override
