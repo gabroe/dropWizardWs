@@ -20,6 +20,11 @@ import com.wordnik.swagger.jaxrs.listing.ResourceListingProvider;
 import com.wordnik.swagger.jaxrs.reader.DefaultJaxrsApiReader;
 import com.wordnik.swagger.reader.ClassReaders;
 
+/**
+ * 
+ * @author gespinola
+ *
+ */
 public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
     public static void main(String[] args) throws Exception {
         new HelloWorldApplication().run(args);
@@ -32,55 +37,52 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
     @Override
     public void initialize(Bootstrap<HelloWorldConfiguration> bootstrap) {
-    	bootstrap.addBundle(new AssetsBundle("/assets","/docs","index.html"));
+        bootstrap.addBundle(new AssetsBundle("/assets", "/docs", "index.html"));
     }
 
     @Override
-	public void run(HelloWorldConfiguration configuration,
-			Environment environment) {
+    public void run(HelloWorldConfiguration configuration,
+            Environment environment) {
 
-    	
-        environment.jersey().register(new HelloWorldResource(
-                configuration.getTemplate(),
-                configuration.getDefaultName()
-            ));
+        environment.jersey().register(
+                new HelloWorldResource(configuration.getTemplate(),
+                        configuration.getDefaultName()));
         environment.jersey().register(new TestResource());
-        
+
         try {
-        	List<String> resources = configuration.getResources();
-        	for (String resource : resources) {
-        		environment.jersey().register(Class.forName(resource).newInstance());				
-			}
-		} catch (InstantiationException | IllegalAccessException
-				| ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-        
-        
-        final TemplateHealthCheck healthCheck =
-                new TemplateHealthCheck(configuration.getTemplate());
+            List<String> resources = configuration.getResources();
+            for (String resource : resources) {
+                environment.jersey().register(
+                        Class.forName(resource).newInstance());
+            }
+        } catch (InstantiationException | IllegalAccessException
+                | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        final TemplateHealthCheck healthCheck = new TemplateHealthCheck(
+                configuration.getTemplate());
         environment.healthChecks().register("template", healthCheck);
-        
+
         // Swagger Resource
- 		environment.jersey().register(new ApiListingResourceJSON());
+        environment.jersey().register(new ApiListingResourceJSON());
 
- 		// Swagger providers
- 		environment.jersey().register(new ApiDeclarationProvider());
- 		environment.jersey().register(new ResourceListingProvider());
+        // Swagger providers
+        environment.jersey().register(new ApiDeclarationProvider());
+        environment.jersey().register(new ResourceListingProvider());
 
- 		
- 		
         // Swagger Scanner, which finds all the resources for @Api Annotations
         ScannerFactory.setScanner(new DefaultJaxrsScanner());
 
-        // Add the reader, which scans the resources and extracts the resource information
+        // Add the reader, which scans the resources and extracts the resource
+        // information
         ClassReaders.setReader(new DefaultJaxrsApiReader());
 
         // Set the swagger config options
         SwaggerConfig config = ConfigFactory.config();
         config.setApiVersion("0.0.1");
         config.setBasePath("http://localhost:8080");
-        
+
     }
 
 }
